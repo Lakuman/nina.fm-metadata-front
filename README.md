@@ -1,8 +1,14 @@
-Admin API for nina.fm WebRadio.
+
+#Definition of this project.
+
 This project is an API for the Webradio nina.fm and the objectiv is to create an easy-to-use website administration system.
 
-To use in the right way this project, makes the following command in a new folder.
+#How to us it ?
 
-git clone https://github.com/Lakuman/nina.fm
-npm install
-http-server 
+To use this project, make the following command in a new folder.
+
+> git clone [this repository](https://github.com/Lakuman/nina.fm)
+> npm install
+> http-server 
+
+
