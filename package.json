@@ -8,16 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Lakuman/nina.fm.git"
+    "url": "git+https://github.com/Lakuman/nina.fm-Admin-API.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Lakuman/nina.fm/issues"
   },
-  "homepage": "https://github.com/Lakuman/nina.fm#readme",
+  "homepage": "https://github.com/Lakuman/nina.fm-Admin-API#readme",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "express": "^4.16.2",
     "vuejs": "^2.0.5"
   }
 }
