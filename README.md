@@ -7,9 +7,9 @@ This project is an API for the Webradio nina.fm and the objectiv is to create an
 
 To use this project, make the following command in a new folder.
 
-&nbsp; git clone [this repository](https://github.com/Lakuman/nina.fm)
-&nbsp; npm install
-&nbsp; http-server 
+* git clone [this repository](https://github.com/Lakuman/nina.fm)
+* npm install
+* http-server 
 
 
 
