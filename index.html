@@ -3,43 +3,29 @@
 	<head>
 		<meta charset="UTF-8">
 		<link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-		<style>
-			#black{
-				background-color: black;
-				height :200px;
-			}
-			#blue{
-				background-color: blue;
-				height :200px;
-			}
-			#yellow{
-				background-color: yellow;
-				height :200px;
-			}
-		</style>
 	</head>
 	<body>
 
 		<!--Test Bootstrap library-->
-		<div class="col-md-4" id="black"></div>
-		<div class="col-md-4" id="blue"></div>
-		<div class="col-md-4" id="yellow"></div>
-		<div id="app">
+		<div class="col-md-12" id="title">nina.fm Administrator</di>
+
+		<!--Test VueJs library-->
+		<div class="col-md-12" id="app">
     		{{ message }}
 		</div>
 
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="./node_modules/vue/dist/vue.min.js"></script>
 		<script>
-    		var app = new vue({
+    		var app = new Vue({
         		el: '#app',
         		data: {
-            		message: 'Hello World!'
+            		message: 'Hello World'
         		}
     		})
 		</script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="./node_modules/vue/dist/vue.js"></script>
+		
 
 	</body>
 </html>
