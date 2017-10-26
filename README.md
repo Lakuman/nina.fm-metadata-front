@@ -9,7 +9,7 @@ The administrator will be able to manage all the data in the webradio such as so
 To use this project, run the following command in a new folder.
 
 * git clone [this repository](https://github.com/Lakuman/nina.fm-metadata-front)
-* npm install http-server -g
+* sudo npm install http-server -g
 * npm install
 * http-server 
 
