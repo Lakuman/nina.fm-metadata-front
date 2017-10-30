@@ -3,12 +3,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
 	</head>
 	<body>
-
+		
 		<!--Test Bootstrap library-->
 		<div class="col-md-5"></div>
-		<div class="col-md-7" id="title">nina.fm Administrator</div>
+		<div class="col-md-7" id="title">nina.fm Administration</div>
 
 		<!--Test VueJs library-->
 		<div class="col-md-5"></div>
@@ -16,6 +17,21 @@
     		{{ message }}
 		</div>
 
+		<!--Affichage des données-->
+		<div class="col-md-12" id="app2">
+    		{{ database }}
+		</div>
+		
+		<script>
+			function httpGet(theUrl){
+    			var xmlHttp = new XMLHttpRequest();
+    			xmlHttp.open("GET", theUrl, false ); // false for synchronous request
+    			xmlHttp.send(null);
+    			return xmlHttp.responseText;
+			}
+			
+		</script>
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="./node_modules/vue/dist/vue.min.js"></script>
@@ -26,8 +42,13 @@
             		message: 'Hello World'
         		}
     		})
-		</script>
-		
-
+    		var app2 = new Vue({
+        		el: '#app2',
+        		data: {
+            		database: httpGet("http://a6b4a4a271.testurl.ws/metadata/")
+        		}
+    		})
+    	</script>
 	</body>
+
 </html>
