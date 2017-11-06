@@ -1,0 +1,70 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+header{
+	font-size: 30px;
+	margin-bottom: 5%;
+	margin-left: 15%;
+
+	margin-top: 2%;
+	border: solid 1px;
+}
+#toolsbar{
+	margin-left: 325px;
+	height: 80px;
+}
+#searchbar{
+	border: solid 1px;
+	height: 100px;
+}
+.AddMixtape{
+	padding: 10px;
+	color: black;
+	font-size: 28px;
+}
+
+nav{
+	position: fixed;
+	border: solid 1px;
+	height: 400px;
+	width:300px;
+	top:170px;
+	left:0;
+	bottom: 130px;
+	
+}
+#info{
+	padding-top: 3px;
+	height: 30px;
+	background-color: #282830;
+	border-radius: 7px;
+	font-size: 18px;
+	color: white;
+
+}
+#line{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #DBDBDB;
+}
+#space{
+	height:20px;
+}
+.MixtapeLists{
+	margin-left: 350px;
+}
+#metadata{
+	margin-top: 3%;
+	font-size: 15px;
+}
+ul{
+	list-style:none;
+
+}
+.RemoveMixtape{
+	margin-left:20%;
+}
+.topbutton{
+	
+}
