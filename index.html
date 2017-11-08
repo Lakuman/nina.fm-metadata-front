@@ -5,43 +5,43 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/main.css" rel="stylesheet">
-
 	</head>
-	<body>
-		
-		<!--Title in Header-->
-		<header class="col-md-9">Nina.fm Gestion des Mixtapes</header>
 
-		<!-- Tools Bar-->
-		<div class="col-md-9" id=toolsbar>
-			<div class="col-md-9" ID="searchbar"><text>Emplacement d'un barre de recherche</text></div>
-			<div class="col-md-3 "><button class="AddMixtape" v-on:click="">Ajouter une Mixtape</button></div>
+	<body>
+		<!-- Sidebar -->
+		<div class="page-sidebar">
+			<header style="margin-bottom: 30px;">
+				<h1 style="font-family:organo;">Nina.fm</h1>
+				<h4>Gestion des Mixtapes</h4>
+			</header>
+			<div class="nav-divider"></div>
 		</div>
 
-		<!--Menu-->
-		<nav>
-			<text>Emplacement du Menu</text>
-		</nav>
-		<!--Display Mixtapes List-->
-		<div class="col-md-9 MixtapeLists"> 
-		    <ul id="metadata">
-			    <li id="info">
-		            <div class="col-md-5">Mixtapes</div>
-				    <div class="col-md-3">Artists</div>
-	    		    <div class="col-md-2">Modifier</div>
-			        <div class="col-md-2">Supprimer</div>
-			    </li>
-			    <li class="col-md-12" id="space" ></li>
-			    <li v-for="metadata in metadata">
-		            <div class="col-md-5">{{metadata.title}}</div>
-				    <div class="col-md-3">{{metadata.artist}}</div>
-	    		    <div class="col-md-2" ><button class="ModifyMixtape" v-on:click="">Modifier</button></div>
-			        <div class="col-md-2" ><button class="RemoveMixtape" v-on:click="">X</button></div>
-			        <div class="col-md-12" id="line" ></div>
-			    </li>
-		    </ul>
-		  </div>
-		  <a href="#" class="topbutton col-md-12">Haut de page</a>
+		<!-- Tools Bar -->
+		<div class="toolsbar col-md-12">
+			<offset class="col-md-9"></offset>
+			<button class="btn btn-dark col-md-2 addmixtape" v-on:click="">Ajouter une Mixtape</button>
+		</div>
+		
+		<!-- Display Mixtapes Table -->
+		<offset class="col-md-2"></offset>
+		<div class="col-md-10" id="metadata" style="font-family: quicksand; padding-left: 50px;">
+			<table class="table table-condensed">
+			    <tr>
+			    	<th></th>
+		            <th>Mixtapes</th>
+				    <th>Artists</th>
+			    </tr>
+			    <tr v-for="metadata in metadata">
+			    	<td><input type="checkbox" class="form-check-input"></td>
+			        <td>{{metadata.title}}</td>
+				    <td>{{metadata.artist}}</td>
+			   	    <td><button type="button" class="btn btn-dark glyphicon glyphicon-edit" v-on:click=""></button></td>
+			        <td><button type="button" class="btn btn-dark glyphicon glyphicon-trash" v-on:click=""></button></td>
+			    </tr>
+			</table>
+		</div>
+		<a href="#" class="col-md-12 btn glyphicon glyphicon-arrow-up"></a>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>

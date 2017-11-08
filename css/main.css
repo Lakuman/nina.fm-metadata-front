@@ -2,69 +2,48 @@
 	margin:0px;
 	padding: 0px;
 }
-header{
-	font-size: 30px;
-	margin-bottom: 5%;
-	margin-left: 15%;
-
-	margin-top: 2%;
-	border: solid 1px;
+@font-face{
+	font-family: "organo";
+	src: url('font/organo/Organo.ttf');
 }
-#toolsbar{
-	margin-left: 325px;
-	height: 80px;
+@font-face{
+	font-family: "quicksand";
+	src: url('font/quicksand/Quicksand-Regular.ttf');
 }
-#searchbar{
-	border: solid 1px;
-	height: 100px;
+@font-face{
+	font-family: "quicksand";
+	font-weight: bold;
+	src: url('font/quicksand/Quicksand-Bold.ttf');
 }
-.AddMixtape{
-	padding: 10px;
-	color: black;
-	font-size: 28px;
+body{
+	background-color: #EBEBEB;
 }
-
-nav{
-	position: fixed;
-	border: solid 1px;
-	height: 400px;
-	width:300px;
-	top:170px;
-	left:0;
-	bottom: 130px;
-	
+.toolsbar{
+	margin-top: 25px;
+	margin-bottom: 50px; 
 }
-#info{
-	padding-top: 3px;
-	height: 30px;
-	background-color: #282830;
-	border-radius: 7px;
+.page-sidebar {
+    background-color: #23232c;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 250px;
+}
+.page-sidebar .nav-divider {
+    background-color: #32323d;
+    height: 1px;
+    margin: 8px 12px;
+}
+.addmixtape{
+	font-size: 20px;
+	font-family: quicksand;
+}
+th{
 	font-size: 18px;
-	color: white;
-
+	font-weight: bold;
 }
-#line{
-	margin-top: 10px;
-	margin-bottom: 10px;
-	background-color: #DBDBDB;
-}
-#space{
-	height:20px;
-}
-.MixtapeLists{
-	margin-left: 350px;
-}
-#metadata{
-	margin-top: 3%;
-	font-size: 15px;
-}
-ul{
-	list-style:none;
-
-}
-.RemoveMixtape{
-	margin-left:20%;
-}
-.topbutton{
-	
+h1, h4{
+	text-align: center; 
+	color: #EBEBEB;
 }
