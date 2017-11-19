@@ -4,14 +4,23 @@
 This project is an administration client for the webradio nina.fm.
 The administrator will be able to manage all the data in the webradio such as songs, albums, pictures and mixtapes by using an API.
 
-# How to use it ?
+## Build Setup
 
-To use this project, run the following command in a new folder.
+``` bash
+# get the Github project 
+git clone [this repository](https://github.com/Lakuman/nina.fm-metadata-front)
 
-* git clone [this repository](https://github.com/Lakuman/nina.fm-metadata-front)
-* sudo npm install http-server -g
-* npm install
-* http-server 
+# install dependencies
+npm install
 
+# serve with hot reload at localhost:8080
+npm run dev
 
+# build for production with minification
+npm run build
 
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

@@ -1,52 +1,12 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/main.css" rel="stylesheet">
-	</head>
-
-	<body>
-		<!-- Sidebar -->
-		<div class="page-sidebar">
-			<header style="margin-bottom: 30px;">
-				<h1 style="font-family:organo;">Nina.fm</h1>
-				<h4>Gestion des Mixtapes</h4>
-			</header>
-			<div class="nav-divider"></div>
-		</div>
-
-		<!-- Tools Bar -->
-		<div class="toolsbar col-md-12">
-			<offset class="col-md-9"></offset>
-			<button class="btn btn-dark col-md-2 addmixtape" v-on:click="">Ajouter une Mixtape</button>
-		</div>
-		
-		<!-- Display Mixtapes Table -->
-		<offset class="col-md-2"></offset>
-		<div class="col-md-10" id="metadata" style="font-family: quicksand; padding-left: 50px;">
-			<table class="table table-condensed">
-			    <tr>
-			    	<th></th>
-		            <th>Mixtapes</th>
-				    <th>Artists</th>
-			    </tr>
-			    <tr v-for="metadata in metadata">
-			    	<td><input type="checkbox" class="form-check-input"></td>
-			        <td>{{metadata.title}}</td>
-				    <td>{{metadata.artist}}</td>
-			   	    <td><button type="button" class="btn btn-dark glyphicon glyphicon-edit" v-on:click=""></button></td>
-			        <td><button type="button" class="btn btn-dark glyphicon glyphicon-trash" v-on:click=""></button></td>
-			    </tr>
-			</table>
-		</div>
-		<a href="#" class="col-md-12 btn glyphicon glyphicon-arrow-up"></a>
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="./node_modules/vue/dist/vue.min.js"></script>
-		<script src="js/main.js"></script>
-	</body>
-
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>nina.fm Webpack</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>

@@ -1,0 +1,75 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+@font-face{
+	font-family: "organo";
+	src: url('../assets/font/organo/Organo.ttf');
+}
+@font-face{
+	font-family: "quicksand";
+	src: url('../assets/font/quicksand/Quicksand-Regular.ttf');
+}
+@font-face{
+	font-family: "quicksand";
+	font-weight: bold;
+	src: url('../assets/font/quicksand/Quicksand-Bold.ttf');
+}
+body{
+	background-color: #EBEBEB;
+}
+.page-sidebar {
+    background-color: #23232c;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 250px;
+}
+.page-sidebar .nav-divider {
+	background-color: #32323d;
+    height: 1px;
+    margin: 8px 12px;
+    margin-bottom: 15%;
+}
+.menubutton{
+	font-family: quicksand;
+	width:70%;
+	font-weight: bold;
+	background-color: #464748;
+	color: #EBEBEB;
+	margin-bottom: 5%;
+}
+.sidebar h1,.sidebar h4{
+	text-align: center; 
+	color: #EBEBEB;
+}
+th{
+	font-size: 18px;
+	font-weight: bold;
+}
+td,th{	
+	padding-bottom: 5px;
+	padding-top: 5px;
+	border-bottom: solid 1px ;
+	border-color: #F6F6F6;
+	padding-left: 30px;
+}
+table{
+	color: black; 
+	text-align:left; 
+	margin-left:30px; 
+	font-family:quicksand;
+}
+.link:hover{
+	background-color: #CACACA;
+	cursor: pointer;
+}
+.text_tracks{
+	text-align: left;
+	margin-left:30px;
+	margin-top: 150px; 
+	font-family:quicksand; 
+	font-size:16px;
+}
+
