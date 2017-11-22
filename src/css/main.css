@@ -39,23 +39,21 @@ body{
 	background-color: #464748;
 	color: #EBEBEB;
 	margin-bottom: 5%;
-}
-.sidebar h1,.sidebar h4{
-	text-align: center; 
-	color: #EBEBEB;
-}
-th{
+}	
+.mixtapes th, .mixtape th{
 	font-size: 18px;
 	font-weight: bold;
+	text-align: left;
+	margin-left: 15px;
 }
-td,th{	
+.mixtapes td,.mixtapes th, .mixtape td{	
 	padding-bottom: 5px;
 	padding-top: 5px;
 	border-bottom: solid 1px ;
 	border-color: #F6F6F6;
-	padding-left: 30px;
+	padding-left: 15px;
 }
-table{
+.mixtapes, .mixtape{
 	color: black; 
 	text-align:left; 
 	margin-left:30px; 
@@ -67,9 +65,7 @@ table{
 }
 .text_tracks{
 	text-align: left;
-	margin-left:30px;
-	margin-top: 150px; 
+	margin-left:20px;
 	font-family:quicksand; 
 	font-size:16px;
 }
-

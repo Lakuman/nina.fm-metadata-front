@@ -1,6 +1,6 @@
 <template>	
-	<div class="col-md-9">
-		<table class="table table-condensed">
+	<div class="col-md-10">
+		<table class="mixtapes table table-condensed">
 			<tr>
 				<th>Mixtapes</th>
 				<th>Artistes</th>
@@ -13,7 +13,9 @@
 				<td class="col-md-5" @click="displayDetails(data.id)">
 					{{data.artist}}
 				</td>
-				<td><button type="button" class=" btn btn-dark glyphicon glyphicon-trash"></button></td>
+				<td class="col-md-1">
+					<button type="button" class=" btn btn-dark glyphicon glyphicon-trash"></button>
+				</td>
 			</tr>
 		</table>
 		<a href="#" class="col-md-12 btn glyphicon glyphicon-arrow-up"></a>
@@ -21,6 +23,8 @@
 </template>
 
 <script>
+
+import * as requests from './requests.js';
 export default {
 	data(){
 		return {
@@ -28,23 +32,12 @@ export default {
 		}
 	},
 	methods:{
-		httpGet(theUrl){
-			var xmlHttp = new XMLHttpRequest();
-	  		xmlHttp.open("GET", theUrl, false); // true for asynchronous request
-	  		xmlHttp.send(null);
-	  		console.log(JSON.parse(xmlHttp.responseText));
-	  		return JSON.parse(xmlHttp.responseText);
-	  	},
-	  	displayList() {
-	  		this.$router.push({name: 'mixtapes'}); 
-	  	}
-	  	,
 	  	displayDetails(idDetails) {
 	  		this.$router.push({ name: 'mixtape',  params: { id: idDetails }}); 
 	  	}
 	},
 	mounted(){
-		this.metadata = this.httpGet("http://a6b4a4a271.testurl.ws/metadata/");
+		this.metadata = requests.getMixtapes("http://a6b4a4a271.testurl.ws/metadata/");
 	}
 }
 </script>
