@@ -20,7 +20,6 @@ export default {
 			addMixtape: null
 		}
 	},
-	
 	methods: {
 		displayList() {
 			this.$router.push({name: 'mixtapes'}); 

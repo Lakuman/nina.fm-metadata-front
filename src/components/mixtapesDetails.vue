@@ -1,21 +1,37 @@
 <template>
-	<div>
-		<div class="col-md-4 col-sm-4 mixtape">
+	<div class="mixtape">
+		<div class="col-md-5 col-sm-5 ">
 			<div class="topData">
 				<h1>{{details.title}}</h1>
 				<h3>Artiste : {{details.artist}}</h3>
 				<h3>Type : {{details.type}}</h3>
 				<h3>Année : {{details.year}}</h3>
 			</div>
-			<table class="mixtape table table-condensed">
+		</div>
+		<div class="col-md-5 col-sm-5 ">
+			<img class="cover" v-bind:src= mixtapeCover></img>
+		</div>
+		<div class="col-md-5 col-sm-5" style="margin-left: 230px;">
+			<table class=" table table-condensed">
+				<tr>
+					<th> Tracks</th>
+				</tr>
 				<tr v-for="mixtape in details.tracks">
 					<td>{{mixtape.artist}} : {{mixtape.title}}</td>
 				</tr>
 			</table>
 		</div>
-		<div class="col-md-3 col-sm-3 mixtape">
-			<img class="cover" v-bind:src= mixtapeCover></img>
-			<div>{{ details.text_tracks}}</div>
+		<div class="col-md-5 col-sm-5 ">
+			<table class=" table table-condensed">
+				<tr>
+					<th> Text_tracks</th>
+				</tr>
+				<tr v-for="details in details.text_tracks">
+					<td>
+						{{details}}
+					</td>
+				</tr>
+			</table>
 		</div>
 	</div>	
 
@@ -54,6 +70,7 @@ export default {
 		else{
 			this.mixtapeCover = "src/assets/No-image-found.jpg"; 
 		}
+		this.details.text_tracks = this.details.text_tracks.split("\n");
 	}
 }
 </script>

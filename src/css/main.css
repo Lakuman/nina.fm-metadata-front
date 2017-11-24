@@ -2,6 +2,10 @@
 	margin:0px;
 	padding: 0px;
 }
+body{
+	background-color: #EBEBEB;
+}
+/* Font */
 @font-face{
 	font-family: "organo";
 	src: url('../assets/font/organo/Organo.ttf');
@@ -15,9 +19,18 @@
 	font-weight: bold;
 	src: url('../assets/font/quicksand/Quicksand-Bold.ttf');
 }
-body{
-	background-color: #EBEBEB;
+/* Title Sidebar */
+.sidebar header{
+	margin-bottom: 30px;
+	color:#EBEBEB; 
+	text-align: center;
 }
+
+.sidebar header h1{
+	font-family: organo;
+}
+
+/* Sidebar body*/
 .page-sidebar {
     background-color: #23232c;
     bottom: 0;
@@ -32,15 +45,8 @@ body{
     margin: 8px 12px;
     margin-bottom: 15%;
 }
-.sidebar header{
-	margin-bottom: 30px;
-	color:#EBEBEB; 
-	text-align: center;
-}
 
-.sidebar header h1{
-	font-family: organo;
-}
+/* Sidebar Menu */
 .menubutton{
 	font-family: quicksand;
 	width:70%;
@@ -49,14 +55,18 @@ body{
 	color: #EBEBEB;
 	margin-left: 35px;
 	margin-bottom: 5%;
-}	
-.mixtapes th{
+}
+
+/* Components */	
+.mixtapes th, .mixtape th{
 	font-size: 18px;
 	font-weight: bold;
-	text-align: left;
-	margin-left: 15px;
+	text-align: left;	
 }
-.mixtapes td, .mixtapes th, .mixtape td{	
+.topData{
+	padding: 45px;
+}
+.mixtapes td, .mixtapes th, .mixtape td, .mixtape th{	
 	padding-bottom: 5px;
 	padding-top: 5px;
 	border-bottom: solid 1px ;
@@ -66,18 +76,17 @@ body{
 .mixtapes, .mixtape{
 	color: black; 
 	text-align:left; 
-	margin-left:30px; 
 	font-family:quicksand;
-}
-.topData{
-	padding: 45px;
+	margin-left: 30px;
 }
 .link:hover{
 	background-color: #CACACA;
 	cursor: pointer;
 }
+
+/* Image */
 .cover{
-	margin-top: 30px;
+	margin: 30px;
 	height: 270px; 
 	width: auto;
 }

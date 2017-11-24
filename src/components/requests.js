@@ -7,8 +7,7 @@ export function getMixtapes(theUrl){
          return JSON.parse(xmlHttp.responseText);
     }
 //Unconfigured methods
-export function addMixtapes(theUrl){
-}
+export function addMixtapes(theUrl){}
 
 
 export function modifieMixtapes(theUrl){}
