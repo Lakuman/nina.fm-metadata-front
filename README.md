@@ -21,6 +21,12 @@ npm run build
 
 # build for production and view the bundle analyzer report
 npm run build --report
+
+# get your own url for the metadata
+create a file in 'assets' named url.js and put this function into the file :
+export function metadataUrl(){
+		return "youUrl";
+}
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

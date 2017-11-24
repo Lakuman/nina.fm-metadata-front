@@ -6,7 +6,7 @@
 				<th>Artistes</th>
 				<th></th>
 			</tr>
-			<tr class="link" style="text-align:left;" v-for="data in metadata">
+			<tr class="link" v-for="data in metadata">
 				<td class="col-md-6" @click="displayDetails(data.id)">
 					{{data.title}}
 				</td>
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-
+import * as url from '../assets/url.js';
 import * as requests from './requests.js';
 export default {
 	data(){
@@ -37,7 +37,8 @@ export default {
 	  	}
 	},
 	mounted(){
-		this.metadata = requests.getMixtapes("http://a6b4a4a271.testurl.ws/metadata/");
+		this.metadata = requests.getMixtapes(url.metadataUrl());
+		console.log(this.metadata);
 	}
 }
 </script>

@@ -1,8 +1,8 @@
 <template>
-	<div class="col-md-2 col-sm-3">
+	<div class="col-md-2 col-sm-3 col-xs-3">
 		<div class="page-sidebar">
-			<header style="margin-bottom: 30px; color:#EBEBEB" >
-				<h1 style="font-family:organo;">Nina.fm</h1>
+			<header>
+				<h1>Nina.fm</h1>
 				<h4>Gestion des Mixtapes</h4>
 			</header>
 			<div class="nav-divider"></div>

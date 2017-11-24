@@ -32,21 +32,31 @@ body{
     margin: 8px 12px;
     margin-bottom: 15%;
 }
+.sidebar header{
+	margin-bottom: 30px;
+	color:#EBEBEB; 
+	text-align: center;
+}
+
+.sidebar header h1{
+	font-family: organo;
+}
 .menubutton{
 	font-family: quicksand;
 	width:70%;
 	font-weight: bold;
 	background-color: #464748;
 	color: #EBEBEB;
+	margin-left: 35px;
 	margin-bottom: 5%;
 }	
-.mixtapes th, .mixtape th{
+.mixtapes th{
 	font-size: 18px;
 	font-weight: bold;
 	text-align: left;
 	margin-left: 15px;
 }
-.mixtapes td,.mixtapes th, .mixtape td{	
+.mixtapes td, .mixtapes th, .mixtape td{	
 	padding-bottom: 5px;
 	padding-top: 5px;
 	border-bottom: solid 1px ;
@@ -59,13 +69,18 @@ body{
 	margin-left:30px; 
 	font-family:quicksand;
 }
+.topData{
+	padding: 45px;
+}
 .link:hover{
 	background-color: #CACACA;
 	cursor: pointer;
 }
-.text_tracks{
-	text-align: left;
-	margin-left:20px;
-	font-family:quicksand; 
-	font-size:16px;
+.cover{
+	margin-top: 30px;
+	height: 270px; 
+	width: auto;
+}
+.addForm{
+	margin-top:300px;
 }

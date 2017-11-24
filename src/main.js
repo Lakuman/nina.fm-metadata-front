@@ -7,8 +7,8 @@ import VueResource from 'vue-resource';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/main.css'
 
-Vue.config.productionTip = false
 
+Vue.config.productionTip = false
 
 new Vue({
   el: '#app',
