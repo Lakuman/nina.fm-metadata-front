@@ -9,6 +9,10 @@ Vue.use(VueRouter)
 export default new VueRouter({
   routes: [
   {
+    path: '/', 
+    redirect: { path: '/mixtapes' }
+  },
+  {
     path: '/mixtapes',
     name: 'mixtapes',
     components: { 
