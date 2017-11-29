@@ -14,7 +14,7 @@
 		<div class="col-md-5 col-sm-5" style="margin-left: 230px;">
 			<table class=" table table-condensed">
 				<tr>
-					<th> Tracks</th>
+					<th>Tracks</th>
 				</tr>
 				<tr v-for="mixtape in details.tracks">
 					<td>{{mixtape.artist}} : {{mixtape.title}}</td>
@@ -24,12 +24,10 @@
 		<div class="col-md-5 col-sm-5 ">
 			<table class=" table table-condensed">
 				<tr>
-					<th> Text_tracks</th>
+					<th>Text_tracks</th>
 				</tr>
-				<tr v-for="details in details.text_tracks">
-					<td>
-						{{details}}
-					</td>
+				<tr v-for="detail in details.text_tracks">
+					<td>{{detail}}</td>
 				</tr>
 			</table>
 		</div>
@@ -43,34 +41,31 @@ export default {
 	data(){
 		return {
 			details: null,
-			mixtapeCover:null
+			mixtapeCover: null,
+			metadata: null,
+			testvalue: null
 		}
 	},
 	methods:{
 		displayCover(){
 			return this.mycover;
 		},
-		getDetails(mixtapeId){
-			this.metadata = requests.getMixtapes(url.metadataUrl());
-		    for (var i = 0; i <= this.metadata.length; i++) {
-		        if(this.metadata[i].id==mixtapeId){
-		            var arraydetails = this.metadata[i];
+		getDetails(mixtapeId, data){
+			for (var i = 0; i <= data.length; i++) {
+		        if(data[i].id==mixtapeId){
+			        var arraydetails = data[i];
 		            return arraydetails;
 		        }
-          	}
+      		}
         }
 	},
 	mounted(){
-		this.details = this.getDetails(this.$route.params.id);
-		var regexp = /\.[a-z]/;
-		console.log(this.details.cover);
-		if(this.details.cover.search(regexp)!=-1){
-			this.mixtapeCover = url.metadataUrl()+this.details.cover;
-		}
-		else{
-			this.mixtapeCover = "src/assets/No-image-found.jpg"; 
-		}
-		this.details.text_tracks = this.details.text_tracks.split("\n");
+		var temp = this;
+		requests.getMixtapes(url.metadataUrl(), function(data){
+			temp.details = temp.getDetails(temp.$route.params.id, data);
+			temp.mixtapeCover = url.metadataUrl()+temp.details.cover;
+			temp.details.text_tracks = temp.details.text_tracks.split("\n");
+		});
 	}
 }
 </script>

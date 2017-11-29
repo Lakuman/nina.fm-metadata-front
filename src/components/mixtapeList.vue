@@ -6,12 +6,12 @@
 				<th>Artistes</th>
 				<th></th>
 			</tr>
-			<tr class="link" v-for="data in metadata">
+			<tr class="link" v-for="data in metadata" v-if="data.type == 'mixtape'">
 				<td class="col-md-6" @click="displayDetails(data.id)">
 					{{data.title}}
 				</td>
 				<td class="col-md-5" @click="displayDetails(data.id)">
-					{{data.artist}}
+					{{data.artist}}	
 				</td>
 				<td class="col-md-1">
 					<button type="button" class=" btn btn-dark glyphicon glyphicon-trash"></button>
@@ -37,8 +37,11 @@ export default {
 	  	}
 	},
 	mounted(){
-		this.metadata = requests.getMixtapes(url.metadataUrl());
-		console.log(this.metadata);
+		var temp = this;
+		requests.getMixtapes(url.metadataUrl(), function(data){
+			temp.metadata = data;
+			
+		});
 	}
 }
 </script>
