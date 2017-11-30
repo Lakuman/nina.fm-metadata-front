@@ -18,7 +18,6 @@ export function modifieMixtapes(theUrl){}
 
 export function deleteMixtapes(theUrl){}
 
-
 //
 export function getDetails(mixtapeId, data){
 	for (var i = 0; i <= data.length; i++) {
@@ -30,4 +29,5 @@ export function getDetails(mixtapeId, data){
 }
 
 	
+
 

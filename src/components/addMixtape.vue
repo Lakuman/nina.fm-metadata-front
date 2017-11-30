@@ -11,7 +11,7 @@
 
 <script>
 
-import * as requests from './requests.js';
+import * as mixtapes from './mixtapes.js';
 import * as url from '../url.js';
 
 export default {
@@ -25,7 +25,7 @@ export default {
 			this.$router.push({name: 'mixtapes'}); 
 		},
 		add(){
-			requests.addMixtapes(url.metadataUrl());
+			mixtapes.addMixtapes(url.metadataUrl());
 		}
 	},
 	mounted(){

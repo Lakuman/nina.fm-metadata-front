@@ -24,7 +24,7 @@
 
 <script>
 import * as url from '../url.js';
-import * as requests from './requests.js';
+import * as mixtapes from './mixtapes.js';
 export default {
 	data(){
 		return {
@@ -38,7 +38,7 @@ export default {
 	},
 	mounted(){
 		var temp = this;
-		requests.getMixtapes(url.metadataUrl(), function(data){
+		mixtapes.getMixtapes(url.metadataUrl(), function(data){
 			temp.metadata = data;
 			
 		});

@@ -35,22 +35,20 @@
 </template>
 <script>
 import * as url from '../url.js';
-import * as requests from './requests.js';
+import * as mixtapes from './mixtapes.js';
 export default {
 	data(){
 		return {
 			mixtape: null,
-			mixtapeCover: null,
-			metadata: null,
-			testvalue: null
+			mixtapeCover: null
 		}
 	},
 	methods:{
 	},
 	mounted(){
 		var temp = this;
-		requests.getMixtapes(url.metadataUrl(), function(data){
-			temp.mixtape = requests.getDetails(temp.$route.params.id, data);
+		mixtapes.getMixtapes(url.metadataUrl(), function(data){
+			temp.mixtape = mixtapes.getDetails(temp.$route.params.id, data);
 			temp.mixtapeCover = url.metadataUrl()+temp.mixtape.cover;
 			temp.mixtape.text_tracks = temp.mixtape.text_tracks.split("\n");
 		});
