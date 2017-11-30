@@ -6,8 +6,8 @@
 				<h4>Gestion des Mixtapes</h4>
 			</header>
 			<div class="nav-divider"></div>
-			<button @click="displayList" class="btn menubutton">Liste des <br class="linebreak">Mixtapes</button>
-			<button @click="goToAddMixtapes" class="btn menubutton">Ajouter une <br class="linebreak">Mixtapes</button>
+			<button @click="displayList" class="btn menubutton">Liste des <br class="linebreak">Mixtape</button>
+			<button @click="goToAddMixtapes" class="btn menubutton">Ajouter une <br class="linebreak">Mixtape</button>
 		</div>
 		<div class="page-sidebar-small">
 			<header>
