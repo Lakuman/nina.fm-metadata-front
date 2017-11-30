@@ -37,9 +37,9 @@ export default {
 	  	}
 	},
 	mounted(){
-		var temp = this;
+		var saveThis = this;
 		mixtapes.getMixtapes(url.metadataUrl(), function(data){
-			temp.metadata = data;
+			saveThis.metadata = data;
 			
 		});
 	}

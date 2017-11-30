@@ -28,9 +28,6 @@ export default {
 			mixtapes.addMixtapes(url.metadataUrl());
 		}
 	},
-	mounted(){
-
-	}
 }
 </script>
 

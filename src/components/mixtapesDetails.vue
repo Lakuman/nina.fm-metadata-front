@@ -43,14 +43,12 @@ export default {
 			mixtapeCover: null
 		}
 	},
-	methods:{
-	},
 	mounted(){
-		var temp = this;
+		var saveThis = this;
 		mixtapes.getMixtapes(url.metadataUrl(), function(data){
-			temp.mixtape = mixtapes.getDetails(temp.$route.params.id, data);
-			temp.mixtapeCover = url.metadataUrl()+temp.mixtape.cover;
-			temp.mixtape.text_tracks = temp.mixtape.text_tracks.split("\n");
+			saveThis.mixtape = mixtapes.getDetails(saveThis.$route.params.id, data);
+			saveThis.mixtapeCover = url.metadataUrl()+saveThis.mixtape.cover;
+			saveThis.mixtape.text_tracks = saveThis.mixtape.text_tracks.split("\n");
 		});
 	}
 }
