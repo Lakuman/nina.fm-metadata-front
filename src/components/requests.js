@@ -1,3 +1,4 @@
+//API requests functions
 
 export function getMixtapes(theUrl, callback){
         var xmlHttp = new XMLHttpRequest();
@@ -10,12 +11,23 @@ export function getMixtapes(theUrl, callback){
 	    }
         xmlHttp.send(null);
 }
-//Unconfigured methods
+	//Unconfigured methods
 export function addMixtapes(theUrl){}
 
 export function modifieMixtapes(theUrl){}
 
 export function deleteMixtapes(theUrl){}
+
+
+//
+export function getDetails(mixtapeId, data){
+	for (var i = 0; i <= data.length; i++) {
+	    if(data[i].id==mixtapeId){
+		    var arraydetails = data[i];
+	            return arraydetails;
+        }
+	}
+}
 
 	
 

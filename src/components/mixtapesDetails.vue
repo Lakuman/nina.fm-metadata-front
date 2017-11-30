@@ -46,19 +46,11 @@ export default {
 		}
 	},
 	methods:{
-		getDetails(mixtapeId, data){
-			for (var i = 0; i <= data.length; i++) {
-		        if(data[i].id==mixtapeId){
-			        var arraydetails = data[i];
-		            return arraydetails;
-		        }
-      		}
-        }
 	},
 	mounted(){
 		var temp = this;
 		requests.getMixtapes(url.metadataUrl(), function(data){
-			temp.mixtape = temp.getDetails(temp.$route.params.id, data);
+			temp.mixtape = requests.getDetails(temp.$route.params.id, data);
 			temp.mixtapeCover = url.metadataUrl()+temp.mixtape.cover;
 			temp.mixtape.text_tracks = temp.mixtape.text_tracks.split("\n");
 		});
