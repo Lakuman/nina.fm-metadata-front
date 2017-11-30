@@ -12,7 +12,7 @@
 <script>
 
 import * as requests from './requests.js';
-import * as url from '../assets/url.js';
+import * as url from '../url.js';
 
 export default {
 	data(){

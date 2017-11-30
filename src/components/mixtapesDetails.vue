@@ -34,7 +34,7 @@
 
 </template>
 <script>
-import * as url from '../assets/url.js';
+import * as url from '../url.js';
 import * as requests from './requests.js';
 export default {
 	data(){

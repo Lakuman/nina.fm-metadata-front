@@ -23,10 +23,11 @@ npm run build
 npm run build --report
 
 # get your own url for the metadata
-create a file in 'assets' named url.js and put this function into the file :
-export function metadataUrl(){
-		return "youUrl";
-}
+create a file in 'src' named url.js and put this function into the file :
+	export function metadataUrl(){
+			return "youUrl";
+	}
+This url go to your JSON API where you can get or send requests.
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
