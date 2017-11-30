@@ -23,7 +23,6 @@
 </template>
 
 <script>
-import * as url from '../url.js';
 import * as mixtapes from './mixtapes.js';
 export default {
 	data(){
@@ -38,7 +37,7 @@ export default {
 	},
 	mounted(){
 		var saveThis = this;
-		mixtapes.getMixtapes(url.metadataUrl(), function(data){
+		mixtapes.getMixtapes(function(data){
 			saveThis.metadata = data;
 			
 		});

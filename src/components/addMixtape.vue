@@ -10,9 +10,7 @@
 </template>
 
 <script>
-
 import * as mixtapes from './mixtapes.js';
-import * as url from '../url.js';
 
 export default {
 	data(){
@@ -25,7 +23,7 @@ export default {
 			this.$router.push({name: 'mixtapes'}); 
 		},
 		add(){
-			mixtapes.addMixtapes(url.metadataUrl());
+			mixtapes.addMixtapes();
 		}
 	},
 }

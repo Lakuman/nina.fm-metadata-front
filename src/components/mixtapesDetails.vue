@@ -45,7 +45,7 @@ export default {
 	},
 	mounted(){
 		var saveThis = this;
-		mixtapes.getMixtapes(url.metadataUrl(), function(data){
+		mixtapes.getMixtapes(function(data){
 			saveThis.mixtape = mixtapes.getDetails(saveThis.$route.params.id, data);
 			saveThis.mixtapeCover = url.metadataUrl()+saveThis.mixtape.cover;
 			saveThis.mixtape.text_tracks = saveThis.mixtape.text_tracks.split("\n");

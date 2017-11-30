@@ -1,8 +1,9 @@
 //API requests functions
+import * as url from '../url.js';
 
-export function getMixtapes(theUrl, callback){
+export function getMixtapes(callback){
         var xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("GET", theUrl, true); // true for asynchronous requests
+        xmlHttp.open("GET", url.metadataUrl(), true); // true for asynchronous requests
         xmlHttp.onreadystatechange = function() {
 	        if(xmlHttp.readyState == XMLHttpRequest.DONE && xmlHttp.status == 200) {
 	            callback(JSON.parse(xmlHttp.response));
@@ -11,11 +12,11 @@ export function getMixtapes(theUrl, callback){
         xmlHttp.send(null);
 }
 	//Unconfigured methods
-export function addMixtapes(theUrl){}
+export function addMixtapes(){}
 
-export function modifieMixtapes(theUrl){}
+export function modifieMixtapes(){}
 
-export function deleteMixtapes(theUrl){}
+export function deleteMixtapes(){}
 
 //
 export function getDetails(mixtapeId, data){
