@@ -4,7 +4,6 @@
 			<div class="topData">
 				<h1>{{details.title}}</h1>
 				<h3>Artiste : {{details.artist}}</h3>
-				<h3>Type : {{details.type}}</h3>
 				<h3>Année : {{details.year}}</h3>
 			</div>
 		</div>
