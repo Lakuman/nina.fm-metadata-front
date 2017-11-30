@@ -31,15 +31,15 @@ body{
 }
 
 /* Sidebar body*/
-.page-sidebar {
+.page-sidebar, .page-sidebar-small {
     background-color: #23232c;
     bottom: 0;
     left: 0;
     position: fixed;
     top: 0;
-    width: 250px;
+    width: 20%;
 }
-.page-sidebar .nav-divider {
+.page-sidebar .nav-divider , .page-sidebar-small .nav-divider {
 	background-color: #32323d;
     height: 1px;
     margin: 8px 12px;
@@ -56,7 +56,9 @@ body{
 	margin-left: 35px;
 	margin-bottom: 5%;
 }
-
+.page-sidebar-small .menubutton{
+	margin-left: 0px;
+}
 /* Components */	
 .mixtapes th, .mixtape th{
 	font-size: 18px;

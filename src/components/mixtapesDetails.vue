@@ -10,7 +10,7 @@
 		<div class="col-md-5 col-sm-5 ">
 			<img class="cover" v-bind:src= mixtapeCover></img>
 		</div>
-		<div class="col-md-5 col-sm-5" style="margin-left: 230px;">
+		<div class="col-md-5 col-sm-5">
 			<table class=" table table-condensed">
 				<tr>
 					<th>Tracks</th>
@@ -20,7 +20,7 @@
 				</tr>
 			</table>
 		</div>
-		<div class="col-md-5 col-sm-5 ">
+		<div class="col-md-5 col-sm-5">
 			<table class=" table table-condensed">
 				<tr>
 					<th>Text_tracks</th>

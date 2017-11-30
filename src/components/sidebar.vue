@@ -6,8 +6,16 @@
 				<h4>Gestion des Mixtapes</h4>
 			</header>
 			<div class="nav-divider"></div>
-			<button @click="displayList" class="btn menubutton">Liste des Mixtapes</button>
-			<button @click="goToAddMixtapes" class="btn menubutton">Ajouter une Mixtapes</button>
+			<button @click="displayList" class="btn menubutton">Liste des <br class="linebreak">Mixtapes</button>
+			<button @click="goToAddMixtapes" class="btn menubutton">Ajouter une <br class="linebreak">Mixtapes</button>
+		</div>
+		<div class="page-sidebar-small">
+			<header>
+				<h1>N</h1>
+			</header>
+			<div class="nav-divider"></div>
+			<button @click="displayList" class="btn menubutton glyphicon glyphicon-list-alt"></button>
+			<button @click="goToAddMixtapes" class="btn menubutton glyphicon glyphicon-plus"></button>
 		</div>
 	</div>
 </template>
@@ -26,5 +34,24 @@ export default {
 }
 </script>
 <style>
+.page-sidebar-small{
+	display: none;
+}
+.linebreak{
+		display: none;
+	}
+@media screen and (max-width: 1024px){
+	.linebreak{
+		display: block;
+	}
+}
+@media screen and (max-width: 730px){
+	.page-sidebar-small{
+		display: block;
+	}
+	.page-sidebar{
+		display: none;
+	}
+}
 
 </style>
