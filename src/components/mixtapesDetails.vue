@@ -2,9 +2,9 @@
 	<div class="mixtape">
 		<div class="col-md-5 col-sm-5 ">
 			<div class="topData">
-				<h1>{{details.title}}</h1>
-				<h3>Artiste : {{details.artist}}</h3>
-				<h3>Année : {{details.year}}</h3>
+				<h1>{{mixtape.title}}</h1>
+				<h3>Artiste : {{mixtape.artist}}</h3>
+				<h3>Année : {{mixtape.year}}</h3>
 			</div>
 		</div>
 		<div class="col-md-5 col-sm-5 ">
@@ -15,8 +15,8 @@
 				<tr>
 					<th>Tracks</th>
 				</tr>
-				<tr v-for="mixtape in details.tracks">
-					<td>{{mixtape.artist}} : {{mixtape.title}}</td>
+				<tr v-for="track in mixtape.tracks">
+					<td>{{track.artist}} : {{track.title}}</td>
 				</tr>
 			</table>
 		</div>
@@ -25,8 +25,8 @@
 				<tr>
 					<th>Text_tracks</th>
 				</tr>
-				<tr v-for="detail in details.text_tracks">
-					<td>{{detail}}</td>
+				<tr v-for="track in mixtape.text_tracks">
+					<td>{{track}}</td>
 				</tr>
 			</table>
 		</div>
@@ -39,7 +39,7 @@ import * as requests from './requests.js';
 export default {
 	data(){
 		return {
-			details: null,
+			mixtape: null,
 			mixtapeCover: null,
 			metadata: null,
 			testvalue: null
@@ -58,9 +58,9 @@ export default {
 	mounted(){
 		var temp = this;
 		requests.getMixtapes(url.metadataUrl(), function(data){
-			temp.details = temp.getDetails(temp.$route.params.id, data);
-			temp.mixtapeCover = url.metadataUrl()+temp.details.cover;
-			temp.details.text_tracks = temp.details.text_tracks.split("\n");
+			temp.mixtape = temp.getDetails(temp.$route.params.id, data);
+			temp.mixtapeCover = url.metadataUrl()+temp.mixtape.cover;
+			temp.mixtape.text_tracks = temp.mixtape.text_tracks.split("\n");
 		});
 	}
 }
