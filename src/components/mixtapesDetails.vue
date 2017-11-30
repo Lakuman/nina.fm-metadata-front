@@ -46,9 +46,6 @@ export default {
 		}
 	},
 	methods:{
-		displayCover(){
-			return this.mycover;
-		},
 		getDetails(mixtapeId, data){
 			for (var i = 0; i <= data.length; i++) {
 		        if(data[i].id==mixtapeId){
