@@ -1,7 +1,7 @@
 //API requests functions
 import * as url from '../url.js';
 
-export function getMixtapes(callback){
+export function get(callback){
         var xmlHttp = new XMLHttpRequest();
         xmlHttp.open("GET", url.metadataUrl(), true); // true for asynchronous requests
         xmlHttp.onreadystatechange = function() {
@@ -12,11 +12,11 @@ export function getMixtapes(callback){
         xmlHttp.send(null);
 }
 	//Unconfigured methods
-export function addMixtapes(){}
+export function add(){}
 
-export function modifieMixtapes(){}
+export function modify(){}
 
-export function deleteMixtapes(){}
+export function remove(){}
 
 //
 export function getDetails(mixtapeId, data){

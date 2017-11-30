@@ -23,7 +23,7 @@ export default {
 			this.$router.push({name: 'mixtapes'}); 
 		},
 		add(){
-			mixtapes.addMixtapes();
+			mixtapes.add();
 		}
 	},
 }
