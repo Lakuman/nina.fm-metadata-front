@@ -1,7 +1,7 @@
 <template>
 	<div class="mixtape">
 		<div class="col-md-5 col-sm-5 ">
-			<div class="topData">
+			<div class="top-data">
 				<h1>{{mixtape.title}}</h1>
 				<h3>Artiste : {{mixtape.artist}}</h3>
 				<h3>Année : {{mixtape.year}}</h3>
@@ -11,7 +11,7 @@
 			<img class="cover" v-bind:src= mixtape.cover></img>
 		</div>
 		<div class="col-md-5 col-sm-5">
-			<table class=" table table-condensed">
+			<table class="table table-condensed">
 				<tr>
 					<th>Tracks</th>
 				</tr>
@@ -33,7 +33,7 @@
 	</div>	
 </template>
 <script>
-	import * as mixtapes from './mixtapes.js';
+	import * as Mixtapes from './mixtapes.js';
 	export default {
 		data(){
 			return {
@@ -42,7 +42,7 @@
 		},
 		mounted(){
 			var saveThis = this;
-			mixtapes.get(function(data){
+			Mixtapes.get(function(data){
 				saveThis.mixtape = data;
 			},saveThis.$route.params.id);
 		}

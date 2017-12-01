@@ -1,12 +1,12 @@
-import * as url from '../url.js';
+import * as Url from '../url.js';
 
 export function get(callback){
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("GET", url.url, true); // true for asynchronous requests
-    xmlHttp.onreadystatechange = function() {
-	    if(xmlHttp.readyState == XMLHttpRequest.DONE && xmlHttp.status == 200) {
-	        callback(JSON.parse(xmlHttp.response));
+    var xml_http = new XMLHttpRequest();
+    xml_http.open("GET", Url.URL, true); // true for asynchronous requests
+    xml_http.onreadystatechange = function() {
+	    if(xml_http.readyState == XMLHttpRequest.DONE && xml_http.status == 200) {
+	        callback(JSON.parse(xml_http.response));
 		}
 	}
-    xmlHttp.send(null);
+    xml_http.send(null);
 }

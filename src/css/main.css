@@ -19,13 +19,13 @@ body{
 	font-weight: bold;
 	src: url('../assets/font/quicksand/Quicksand-Bold.ttf');
 }
+
 /* Title Sidebar */
 .sidebar header{
 	margin-bottom: 30px;
 	color:#EBEBEB; 
 	text-align: center;
 }
-
 .sidebar header h1{
 	font-family: organo;
 }
@@ -43,15 +43,14 @@ body{
 .page-sidebar .nav-divider , .page-sidebar-small .nav-divider {
 	background-color: #32323d;
     height: 1px;
-    margin: 8px 12px;
-    margin-bottom: 15%;
+    margin: 8px;
 }
 
 /* Sidebar Menu */
 
 .page-sidebar button, .page-sidebar-small button{
 	text-align: center;
-	margin-bottom: 30px;
+	margin-top: 30px;
 	background-color: #1F1F27;
 	color: #EBEBEB ;
 	border: solid 1px;
@@ -60,13 +59,7 @@ body{
 .page-sidebar-small{
 	display: none;
 }
-.linebreak{
-		display: none;
-	}
 @media screen and (max-width: 1024px){
-	.linebreak{
-		display: block;
-	}
 	.page-sidebar{
 		width:22%;
 
@@ -84,13 +77,14 @@ body{
 		width: 30%;
 	}
 }
+
 /* Components */	
 .mixtapes th, .mixtape th{
 	font-size: 18px;
 	font-weight: bold;
 	text-align: left;	
 }
-.topData{
+.top-data{
 	padding: 45px;
 }
 .mixtapes td, .mixtapes th, .mixtape td, .mixtape th{	
@@ -117,6 +111,6 @@ body{
 	height: 270px; 
 	width: auto;
 }
-.addForm{
+.add-form{
 	margin-top:300px;
 }

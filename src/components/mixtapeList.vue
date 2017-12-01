@@ -23,7 +23,7 @@
 </template>
 
 <script>
-	import * as mixtapes from './mixtapes.js';
+	import * as Mixtapes from './mixtapes.js';
 	export default {
 		data(){
 			return {
@@ -31,14 +31,14 @@
 			}
 		},
 		methods:{
-		  	displayDetails(idDetails){
-		  		this.$router.push({ name: 'mixtape',  params: { id: idDetails }}); 
+		  	displayDetails(id){
+		  		this.$router.push({ name: 'mixtape',  params: { id: id }}); 
 		  	}
 		},
 		mounted(){
-			var saveThis = this;
-			mixtapes.get(function(data){
-				saveThis.metadata = data;
+			var save_this = this;
+			Mixtapes.get(function(data){
+				save_this.metadata = data;
 			});
 		}
 }

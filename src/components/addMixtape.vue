@@ -1,5 +1,5 @@
 <template>
-	<div class="addForm">
+	<div class="add-form">
 		<div class="col-md-4 col-sm-4 col-xs-4">
 		</div>
 		<div class="col-md-6 col-sm-6 col-xs-6">
@@ -10,11 +10,11 @@
 </template>
 
 <script>
-import * as mixtapes from './mixtapes.js';
+import * as Mixtapes from './mixtapes.js';
 export default {
 	data(){
 		return {
-			addMixtape: null
+			add_mixtape: null,
 		}
 	},
 	methods: {
@@ -22,7 +22,7 @@ export default {
 			this.$router.push({name: 'mixtapes'}); 
 		},
 		add(){
-			mixtapes.add();
+			Mixtapes.add();
 		}
 	},
 }
