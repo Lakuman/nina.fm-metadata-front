@@ -1,13 +1,13 @@
 <template>
-	<div class="col-md-2 col-sm-3 col-xs-3">
+	<div>
 		<div class="page-sidebar">
 			<header>
 				<h1>Nina.fm</h1>
 				<h4>Gestion des Mixtapes</h4>
 			</header>
 			<div class="nav-divider"></div>
-			<button @click="displayList" class="btn menubutton">Liste des <br class="linebreak">Mixtape</button>
-			<button @click="goToAddMixtapes" class="btn menubutton">Ajouter une <br class="linebreak">Mixtape</button>
+			<button @click="displayList" class="btn menubutton">Liste des Mixtape</button>
+			<button @click="goToAddMixtapes" class="btn menubutton">Ajouter une Mixtape</button>
 		</div>
 		<div class="page-sidebar-small">
 			<header>
@@ -20,17 +20,17 @@
 	</div>
 </template>
 <script>
-export default {
-	methods: {
-		displayList() {
-			this.$router.push({name: 'mixtapes'}); 
-		},
-		//Unfinished functionality
-		goToAddMixtapes(){
-			this.$router.push({name: 'addMixtape'}); 
+	export default {
+		methods: {
+			displayList() {
+				this.$router.push({name: 'mixtapes'}); 
+			},
+			//Unfinished functionality
+			goToAddMixtapes(){
+				this.$router.push({name: 'addMixtape'}); 
+			}
 		}
 	}
-}
 </script>
 <style>
 </style>

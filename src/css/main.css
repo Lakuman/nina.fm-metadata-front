@@ -36,6 +36,7 @@ body{
     bottom: 0;
     left: 0;
     position: fixed;
+    text-align: center;
     top: 0;
     width: 20%;
 }
@@ -47,21 +48,17 @@ body{
 }
 
 /* Sidebar Menu */
-.menubutton{
-	font-family: quicksand;
-	width:70%;
-	font-weight: bold;
-	background-color: #464748;
-	color: #EBEBEB;
-	margin-left: 35px;
-	margin-bottom: 5%;
+
+.page-sidebar button, .page-sidebar-small button{
+	text-align: center;
+	margin-bottom: 30px;
+	background-color: #1F1F27;
+	color: #EBEBEB ;
+	border: solid 1px;
+	border-color: #EBEBEB; 
 }
 .page-sidebar-small{
 	display: none;
-}
-.page-sidebar-small button{
-	margin-left: 20%;
-	text-align: center;
 }
 .linebreak{
 		display: none;
@@ -70,13 +67,21 @@ body{
 	.linebreak{
 		display: block;
 	}
+	.page-sidebar{
+		width:22%;
+
+	}
 }
-@media screen and (max-width: 730px){
+@media screen and (max-width: 800px){
 	.page-sidebar-small{
 		display: block;
 	}
 	.page-sidebar{
 		display: none;
+	}
+	.cover{
+		height: auto;
+		width: 50%;
 	}
 }
 /* Components */	

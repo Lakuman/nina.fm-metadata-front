@@ -23,24 +23,24 @@
 </template>
 
 <script>
-import * as mixtapes from './mixtapes.js';
-export default {
-	data(){
-		return {
-			metadata: null
+	import * as mixtapes from './mixtapes.js';
+	export default {
+		data(){
+			return {
+				metadata: null
+			}
+		},
+		methods:{
+		  	displayDetails(idDetails){
+		  		this.$router.push({ name: 'mixtape',  params: { id: idDetails }}); 
+		  	}
+		},
+		mounted(){
+			var saveThis = this;
+			mixtapes.get(function(data){
+				saveThis.metadata = data;
+			});
 		}
-	},
-	methods:{
-	  	displayDetails(idDetails){
-	  		this.$router.push({ name: 'mixtape',  params: { id: idDetails }}); 
-	  	}
-	},
-	mounted(){
-		var saveThis = this;
-		mixtapes.get(function(data){
-			saveThis.metadata = data;
-		});
-	}
 }
 </script>
 

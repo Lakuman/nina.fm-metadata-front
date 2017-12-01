@@ -15,7 +15,6 @@ export function get(callback, mixtapeId){
                     mixtape.text_tracks = mixtape.text_tracks.split("\n");
                     callback(mixtape);
                 }
-            console.log("mixtapeId:"+mixtapeId)
             }
         }    
     });

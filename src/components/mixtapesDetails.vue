@@ -31,23 +31,22 @@
 			</table>
 		</div>
 	</div>	
-
 </template>
 <script>
-import * as mixtapes from './mixtapes.js';
-export default {
-	data(){
-		return {
-			mixtape: null,
+	import * as mixtapes from './mixtapes.js';
+	export default {
+		data(){
+			return {
+				mixtape: null,
+			}
+		},
+		mounted(){
+			var saveThis = this;
+			mixtapes.get(function(data){
+				saveThis.mixtape = data;
+			},saveThis.$route.params.id);
 		}
-	},
-	mounted(){
-		var saveThis = this;
-		mixtapes.get(function(data){
-			saveThis.mixtape = data;
-		},saveThis.$route.params.id);
 	}
-}
 </script>
 <style>
 </style>
