@@ -1,6 +1,6 @@
 <template>	
-	<div class="col-md-12 col-sm-12">
-		<table class="mixtapes table table-condensed">
+	<div class="mixtapes col-md-12 col-sm-12">
+		<table class="table table-condensed">
 			<tr>
 				<th>Mixtapes</th>
 				<th>Artistes</th>
