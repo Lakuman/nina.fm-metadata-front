@@ -11,7 +11,6 @@
 
 <script>
 import * as mixtapes from './mixtapes.js';
-
 export default {
 	data(){
 		return {

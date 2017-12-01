@@ -1,3 +1,1 @@
-export function metadataUrl(){
-		return "http://a6b4a4a271.testurl.ws/metadata/";
-}
+export const url = "http://a6b4a4a271.testurl.ws/metadata/";

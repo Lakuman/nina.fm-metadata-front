@@ -11,7 +11,7 @@ export function get(callback, mixtapeId){
             for (var i = 0; i <= metadata.length; i++) {
                 if(metadata[i].id==mixtapeId){
                     var mixtape = metadata[i];
-                    mixtape.cover = url.metadataUrl()+ mixtape.cover;
+                    mixtape.cover = url.url+ mixtape.cover;
                     mixtape.text_tracks = mixtape.text_tracks.split("\n");
                     callback(mixtape);
                 }
