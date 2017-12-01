@@ -6,8 +6,8 @@
 				<th>Artistes</th>
 				<th></th>
 			</tr>
-			<tr v-for="data in metadata" v-if="data.type == 'mixtape'">
-				<td class="col-md-6 col-sm-6 link" @click="displayDetails(data.id)">
+			<tr class="link" v-for="data in metadata" v-if="data.type == 'mixtape'">
+				<td class="col-md-6 col-sm-6" @click="displayDetails(data.id)">
 					{{data.title}}
 				</td>
 				<td class="col-md-5 col-sm-5" @click="displayDetails(data.id)">

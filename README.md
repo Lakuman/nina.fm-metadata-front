@@ -26,7 +26,7 @@ npm run build --report
 create a file in 'src' named url.js and put this code into the file :
 	export const url = 'yourUrl';
 
-replace "yourUrl" by the link where your API is stored.
+replace "yourUrl" by the url where your API is stored.
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

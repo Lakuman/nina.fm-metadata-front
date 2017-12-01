@@ -56,8 +56,28 @@ body{
 	margin-left: 35px;
 	margin-bottom: 5%;
 }
-.page-sidebar-small .menubutton{
-	margin-left: 0px;
+.page-sidebar-small{
+	display: none;
+}
+.page-sidebar-small button{
+	margin-left: 20%;
+	text-align: center;
+}
+.linebreak{
+		display: none;
+	}
+@media screen and (max-width: 1024px){
+	.linebreak{
+		display: block;
+	}
+}
+@media screen and (max-width: 730px){
+	.page-sidebar-small{
+		display: block;
+	}
+	.page-sidebar{
+		display: none;
+	}
 }
 /* Components */	
 .mixtapes th, .mixtape th{

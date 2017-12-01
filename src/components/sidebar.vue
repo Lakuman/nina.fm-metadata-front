@@ -19,7 +19,7 @@
 		</div>
 	</div>
 </template>
-<script >
+<script>
 export default {
 	methods: {
 		displayList() {
@@ -33,24 +33,4 @@ export default {
 }
 </script>
 <style>
-.page-sidebar-small{
-	display: none;
-}
-.linebreak{
-		display: none;
-	}
-@media screen and (max-width: 1024px){
-	.linebreak{
-		display: block;
-	}
-}
-@media screen and (max-width: 730px){
-	.page-sidebar-small{
-		display: block;
-	}
-	.page-sidebar{
-		display: none;
-	}
-}
-
 </style>
