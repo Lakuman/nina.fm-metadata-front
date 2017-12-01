@@ -8,7 +8,7 @@
 			</div>
 		</div>
 		<div class="col-md-5 col-sm-5 ">
-			<img class="cover" v-bind:src= mixtapeCover></img>
+			<img class="cover" v-bind:src= mixtape.cover></img>
 		</div>
 		<div class="col-md-5 col-sm-5">
 			<table class=" table table-condensed">
@@ -34,22 +34,18 @@
 
 </template>
 <script>
-import * as url from '../url.js';
 import * as mixtapes from './mixtapes.js';
 export default {
 	data(){
 		return {
 			mixtape: null,
-			mixtapeCover: null
 		}
 	},
 	mounted(){
 		var saveThis = this;
 		mixtapes.get(function(data){
-			saveThis.mixtape = mixtapes.getDetails(saveThis.$route.params.id, data);
-			saveThis.mixtapeCover = url.metadataUrl()+saveThis.mixtape.cover;
-			saveThis.mixtape.text_tracks = saveThis.mixtape.text_tracks.split("\n");
-		});
+			saveThis.mixtape = data;
+		},saveThis.$route.params.id);
 	}
 }
 </script>
