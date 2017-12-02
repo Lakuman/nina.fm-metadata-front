@@ -11,7 +11,7 @@
 		</div>
 		<div class="page-sidebar-small">
 			<header>
-				<h1>N</h1>
+				<img class ="logo" src="../assets/img/logo.png"></img>
 			</header>
 			<div class="nav-divider"></div>
 			<button @click="displayList" class="btn menubutton glyphicon glyphicon-list-alt"></button>

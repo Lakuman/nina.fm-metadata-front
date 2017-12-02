@@ -14,7 +14,6 @@ import * as Mixtapes from './mixtapes.js';
 export default {
 	data(){
 		return {
-			add_mixtape: null,
 		}
 	},
 	methods: {

@@ -29,7 +29,11 @@ body{
 .sidebar header h1{
 	font-family: organo;
 }
-
+.logo{
+	margin-top: 15px;
+	height: 30px;
+	width: 30px;
+}
 /* Sidebar body*/
 .page-sidebar, .page-sidebar-small {
     background-color: #23232c;
