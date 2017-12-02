@@ -7,7 +7,7 @@
 			</header>
 			<div class="nav-divider"></div>
 			<button @click="displayList" class="btn menubutton">Liste des Mixtapes</button>
-			<button @click="goToAddMixtapes" class="btn menubutton">Ajouter une Mixtape</button>
+			<button @click="goToAddMixtapes" class="btn menubutton" disabled="true">Ajouter une Mixtape</button>
 		</div>
 		<div class="page-sidebar-small">
 			<header>
