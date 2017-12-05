@@ -9,11 +9,13 @@ export function get(callback, mixtape_id){
         }
         else{
             for (var i = 0; i <= metadata.length; i++) {
-                if(metadata[i].id==mixtape_id){
-                    var mixtape = metadata[i];
-                    mixtape.cover = Url.URL_API + mixtape.cover;
-                    mixtape.text_tracks = mixtape.text_tracks.split("\n");
-                    callback(mixtape);
+                if(metadata[i]!=undefined){
+                    if(metadata[i].id==mixtape_id){
+                        var mixtape = metadata[i];
+                        mixtape.cover = Url.URL_API + mixtape.cover;
+                        mixtape.text_tracks = mixtape.text_tracks.split("\n");
+                        callback(mixtape);
+                    }
                 }
             }
         }    
