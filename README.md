@@ -24,7 +24,7 @@ npm run build --report
 
 # set your own url for the metadata
 create a file in 'src' named url.js and put this code into the file :
-	export const URL = 'yourUrl';
+	export const URL_API = "yourUrl";
 
 replace "yourUrl" by the url where your API is stored.
 ```
