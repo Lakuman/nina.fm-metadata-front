@@ -1,5 +1,5 @@
 <template>
-	<div class="mixtape">
+	<div class="mixtape"  v-if="mixtape != null">
 		<div class="col-md-5 col-sm-5 ">
 			<div class="top-data">
 				<h1>{{mixtape.title}}</h1>
@@ -7,7 +7,7 @@
 				<h3>Année : {{mixtape.year}}</h3>
 			</div>
 		</div>
-		<div class="col-md-5 col-sm-5 ">
+		<div class="col-md-5 col-sm-5">
 			<img class="cover" v-bind:src= mixtape.cover></img>
 		</div>
 		<div class="col-md-5 col-sm-5">
